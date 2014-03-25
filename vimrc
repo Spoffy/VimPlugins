@@ -21,6 +21,7 @@ Plugin 'fholgado/minibufexpl.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-vividchalk'
+Plugin 'Valloric/YouCompleteme'
 
 filetype on
 
