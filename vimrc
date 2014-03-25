@@ -26,9 +26,13 @@ Plugin 'Valloric/YouCompleteme'
 filetype on
 
 "Plugin Config
-let color_scheme_path='~/.vim/bundle/vim-vividchalk/colors/vividchalk.vim'
-if filereadable(color_scheme_path)
-    source color_scheme_path
+"Resolves the vimrc if it's a symlink, then loads the color scheme
+let color_scheme_path=expand('<sfile>:p:h') . '/.vim/bundle/vim-vividchalk/colors/vividchalk.vim'
+let alternate_color_scheme_path=fnamemodify(resolve(expand('<sfile>:p')), ':h') . '/bundle/vim-vividchalk/colors/vividchalk.vim'
+if filereadable(color_scheme_path) 
+    exec 'source ' . color_scheme_path
+elseif filereadable(alternate_color_scheme_path)
+    exec 'source ' . alternate_color_scheme_path
 endif
 
 let g:syntastic_cpp_check_header = 1
