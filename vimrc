@@ -3,8 +3,11 @@ set background=dark
 
 set autoindent
 set expandtab
-set tabstop=4
-set shiftwidth=4
+set tabstop=2
+set shiftwidth=2
+
+"Fix for backspaces
+set backspace=2
 
 set tags=./tags;
 
