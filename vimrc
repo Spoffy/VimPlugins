@@ -25,6 +25,10 @@ Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-vividchalk'
 Plugin 'Valloric/YouCompleteme'
+Plugin 'wlue/vim-dm-syntax'
+
+"let g:ycm_server_use_vim_stdout = 1
+let g:ycm_server_log_level = 'debug'
 
 filetype on
 
@@ -37,12 +41,3 @@ if filereadable(color_scheme_path)
 elseif filereadable(alternate_color_scheme_path)
     exec 'source ' . alternate_color_scheme_path
 endif
-
-let g:syntastic_cpp_check_header = 1
-let g:syntastic_cpp_compiler = 'g++'
-let g:syntastic_cpp_compiler_options = '-std=c++11'
-
-let g:ctrlp_map = '<c-p>'
-let g:ctrlp_cmd = 'CtrlP'
-
-let g:syntastic_mode_map = { 'mode' : 'passive' }
