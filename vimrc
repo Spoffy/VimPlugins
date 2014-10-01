@@ -15,7 +15,8 @@ set tags=./tags;
 set nocompatible
 filetype off
 set rtp+=~/.vim/bundle/vundle/
-call vundle#rc()
+call vundle#begin()
+
 Plugin 'gmarik/vundle'
 
 "Plugins
@@ -26,6 +27,9 @@ Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-vividchalk'
 Plugin 'Valloric/YouCompleteme'
 Plugin 'wlue/vim-dm-syntax'
+
+call vundle#end()
+filetype plugin indent on
 
 "let g:ycm_server_use_vim_stdout = 1
 let g:ycm_server_log_level = 'debug'
