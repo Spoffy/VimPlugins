@@ -23,10 +23,10 @@ Plugin 'gmarik/vundle'
 Plugin 'kien/ctrlp.vim'
 Plugin 'fholgado/minibufexpl.vim'
 Plugin 'scrooloose/nerdtree'
-Plugin 'scrooloose/syntastic'
 Plugin 'tpope/vim-vividchalk'
 Plugin 'Valloric/YouCompleteme'
 Plugin 'wlue/vim-dm-syntax'
+Plugin 'wting/rust.vim'
 
 call vundle#end()
 filetype plugin indent on
