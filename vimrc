@@ -21,19 +21,15 @@ Plugin 'gmarik/vundle'
 
 "Plugins
 Plugin 'kien/ctrlp.vim'
+Plugin 'rking/ag.vim'
 Plugin 'fholgado/minibufexpl.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-vividchalk'
-Plugin 'Valloric/YouCompleteme'
 Plugin 'wlue/vim-dm-syntax'
 Plugin 'wting/rust.vim'
 
 call vundle#end()
 filetype plugin indent on
-
-"let g:ycm_server_use_vim_stdout = 1
-let g:ycm_server_log_level = 'debug'
-
 filetype on
 
 "Plugin Config
@@ -44,4 +40,14 @@ if filereadable(color_scheme_path)
     exec 'source ' . color_scheme_path
 elseif filereadable(alternate_color_scheme_path)
     exec 'source ' . alternate_color_scheme_path
+endif
+
+"Sets CtrlP to use 'The Silver Searcher' if available
+if executable('ag')
+  set grepprg=ag\ --nogroup\ --nocolor
+
+  let g:ctrlp_user_command = 'ag %s -l --nocolor -g ""'
+  
+  "Ag is fast enough to not need caching
+  let g:ctrlp_use_caching = 0
 endif
