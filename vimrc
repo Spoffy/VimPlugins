@@ -5,7 +5,6 @@ set autoindent
 set expandtab
 set tabstop=2
 set shiftwidth=2
-set smarttab
 
 "Fix for backspaces
 set backspace=2
@@ -21,17 +20,17 @@ call vundle#begin()
 Plugin 'gmarik/vundle'
 
 "Plugins
-Plugin 'kien/ctrlp.vim'
-Plugin 'rking/ag.vim'
+"Plugin 'ctrlpvim/ctrlp.vim'
+Plugin 'mileszs/ack.vim'
 Plugin 'fholgado/minibufexpl.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'tpope/vim-vividchalk'
-Plugin 'wlue/vim-dm-syntax'
-Plugin 'wting/rust.vim'
+"Plugin 'wlue/vim-dm-syntax'
+"Plugin 'wting/rust.vim'
 
 call vundle#end()
-filetype plugin indent on
-filetype on
+"filetype plugin indent on
+"filetype on
 
 "Plugin Config
 "Resolves the vimrc if it's a symlink, then loads the color scheme
