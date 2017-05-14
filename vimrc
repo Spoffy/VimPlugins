@@ -1,4 +1,3 @@
-syntax on
 set background=dark
 
 set autoindent
@@ -51,3 +50,6 @@ if executable('ag')
   "Ag is fast enough to not need caching
   let g:ctrlp_use_caching = 0
 endif
+
+"Syntax highlighting turned on last, to prevent plugins overwriting it
+syntax on
