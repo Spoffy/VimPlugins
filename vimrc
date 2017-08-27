@@ -24,8 +24,9 @@ Plugin 'gmarik/vundle'
 Plugin 'mileszs/ack.vim'
 Plugin 'fholgado/minibufexpl.vim'
 Plugin 'scrooloose/nerdtree'
-Plugin 'tomasr/molokai'
+Plugin 'StanAngeloff/php.vim'
 Plugin 'dracula/vim'
+Plugin 'morhetz/gruvbox'
 "Plugin 'wlue/vim-dm-syntax'
 "Plugin 'wting/rust.vim'
 
@@ -35,7 +36,7 @@ filetype on
 
 "Plugin Config
 "Resolves the vimrc if it's a symlink, then loads the color scheme
-let color_file='vim/colors/dracula.vim'
+let color_file='gruvbox/colors/gruvbox.vim'
 let color_scheme_path=expand('<sfile>:p:h') . '/.vim/bundle/' . color_file
 let alternate_color_scheme_path=fnamemodify(resolve(expand('<sfile>:p')), ':h') . '/bundle/' . color_file
 if filereadable(color_scheme_path) 
