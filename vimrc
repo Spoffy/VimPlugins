@@ -1,3 +1,4 @@
+syntax on
 set background=dark
 
 set autoindent
@@ -23,18 +24,20 @@ Plugin 'gmarik/vundle'
 Plugin 'mileszs/ack.vim'
 Plugin 'fholgado/minibufexpl.vim'
 Plugin 'scrooloose/nerdtree'
-Plugin 'tpope/vim-vividchalk'
+Plugin 'tomasr/molokai'
+Plugin 'dracula/vim'
 "Plugin 'wlue/vim-dm-syntax'
 "Plugin 'wting/rust.vim'
 
 call vundle#end()
 "filetype plugin indent on
-"filetype on
+filetype on
 
 "Plugin Config
 "Resolves the vimrc if it's a symlink, then loads the color scheme
-let color_scheme_path=expand('<sfile>:p:h') . '/.vim/bundle/vim-vividchalk/colors/vividchalk.vim'
-let alternate_color_scheme_path=fnamemodify(resolve(expand('<sfile>:p')), ':h') . '/bundle/vim-vividchalk/colors/vividchalk.vim'
+let color_file='vim/colors/dracula.vim'
+let color_scheme_path=expand('<sfile>:p:h') . '/.vim/bundle/' . color_file
+let alternate_color_scheme_path=fnamemodify(resolve(expand('<sfile>:p')), ':h') . '/bundle/' . color_file
 if filereadable(color_scheme_path) 
     exec 'source ' . color_scheme_path
 elseif filereadable(alternate_color_scheme_path)
@@ -50,6 +53,3 @@ if executable('ag')
   "Ag is fast enough to not need caching
   let g:ctrlp_use_caching = 0
 endif
-
-"Syntax highlighting turned on last, to prevent plugins overwriting it
-syntax on
