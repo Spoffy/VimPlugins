@@ -35,15 +35,7 @@ call vundle#end()
 filetype on
 
 "Plugin Config
-"Resolves the vimrc if it's a symlink, then loads the color scheme
-let color_file='gruvbox/colors/gruvbox.vim'
-let color_scheme_path=expand('<sfile>:p:h') . '/.vim/bundle/' . color_file
-let alternate_color_scheme_path=fnamemodify(resolve(expand('<sfile>:p')), ':h') . '/bundle/' . color_file
-if filereadable(color_scheme_path) 
-    exec 'source ' . color_scheme_path
-elseif filereadable(alternate_color_scheme_path)
-    exec 'source ' . alternate_color_scheme_path
-endif
+colorscheme gruvbox
 
 "Sets CtrlP to use 'The Silver Searcher' if available
 if executable('ag')
